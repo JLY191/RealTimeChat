@@ -45,7 +45,7 @@ const Chat = () => {
         <div>
             <ul>
                 {messages.map((message, index) => (
-                    <li key={index}>{message.sender + ": "}{message.content}</li>
+                    <li key={index}>{message.sender ? `${message.sender}: ` : 'Server: '}{message.content}</li>
                 ))}
             </ul>
             <input
